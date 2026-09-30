@@ -1,26 +1,24 @@
-
-
-*{
+* {
     border: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: grey;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 0.5rem;
 }
 
-h2{
+h2 {
     font-weight: bolder;
     color: azure;
 }
 
-.formSection{
+.formSection {
     direction: rtl;
     background-color: aliceblue;
     width: 60%;
@@ -34,33 +32,111 @@ h2{
 
 }
 
-.formSection input:checked{
+.formSection input:checked {
     accent-color: green;
 
 }
 
-.formSection input:required{
+.formSection input:required {
     background-color: cadetblue;
     padding: 1rem;
     border-radius: 12px;
 }
 
-.formSection input:disabled{
+.formSection input:disabled {
     border: 1px solid black;
     padding: 1rem;
 }
 
-.formSection input:optional{
+.formSection input:optional {
     /* border: 5px solid green; */
     /* padding: 0.5rem; */
 }
 
-.formSection input:read-only{
+.formSection input:read-only {
     background-color: rgba(127, 127, 239, 0.6);
 }
 
-.formSection input:placeholder-shown{
+.formSection input:placeholder-shown {
     padding: 1.5rem;
     color: black;
     border: 2px solid blue;
+}
+
+
+.main_box {
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.box {
+    padding: 15px;
+    background-color: white;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.box::before {
+    content: "3";
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background-color: red;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.boxAfter {
+    position: relative;
+    background-color: aqua;
+    color: brown;
+    padding: 15px 200px;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+
+.boxAfter::after {
+    content: "برای اطلاعات بیشتر کلیک کنید";
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: gray;
+    color: black;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.boxAfter:hover::after {
+    opacity: 1;
+}
+
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+dialog {
+    padding: 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }

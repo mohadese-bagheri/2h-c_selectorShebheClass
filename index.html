@@ -26,6 +26,33 @@
         <input type="text" placeholder="با placeholder">
 
     </div>
+
+    <h2>before & after selector</h2>
+
+    <div class="main_box">
+        <div class="box">
+            کلاس های جدید دارید
+        </div>
+    </div>
+
+    <div class="main_box">
+        <div class="boxAfter">
+            روی این جعبه هاور کنید
+        </div>
+    </div>
+
+
+    <h1>modal</h1>
+
+    <button 
+    onclick="document.getElementById('mydialog').showMAodal()" 
+    >باز کردن مودال</button>
+
+    <dialog id="mydialog">
+این یک مودال تستی هست 
+<br> <br>
+<button  onclick="document.getElementById('mydialog').close()" >بستن مودال</button>
+    </dialog>
 </body>
 
 </html>
